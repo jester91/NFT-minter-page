@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lazy NFT minter</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link href="/style.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        text-align: center;
+        background-color: #388a68;
+      }
+      #app {
+        margin-top: 10px;
+        height: 400px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 20px;
+        color: #424242;
+        display: none;
+      }
+      .form_element {
+        margin-top: 20px;
+      }
+      .title {
+        color: #f4f0e3;
+        margin-top: 10px;
+      }
+      #success_message {
+        background-color: #c4ffc4;
+        border: 1px solid #0fcf0f;
+        border-radius: 4px;
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">Jester's Hub</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a class="active" href="/stuff/nftminter.html">Lazy NFT Minter</a></li>
+        <li><a href="/stuff/randomnft.html">Create NFT with Random statistic</a></li>
+        <li><a href="/stuff/config.html">Config of the random NFT creator</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="title">Lazy NFT minter</div>
+        <div id="app" class="col-md-6 offset-md-3">
+          <div id="success_message"></div>
+          <div class="form_element">
+            <input class="form-control type="text" id="input_name" name="name"
+            placeholder="Name of the NFT">
+          </div>
+          <div class="form_element">
+            <input class="form-control type="text" id="input_description"
+            name="description" placeholder="Description of the NFT">
+          </div>
+          <div class="form_element">
+            <input
+              class="form-control"
+              type="file"
+              id="input_image"
+              name="image"
+              accept="image/png, image/jpeg"
+            />
+          </div>
+          <div class="form-element">
+            <button
+              class="btn btn-primary btn-lg btn-block"
+              id="submit_button"
+              style="background-color: #388a68; margin-top: 5%"
+            >
+              Spread the word
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="magic/main.js"></script>
+  </body>
+</html>
